@@ -1,0 +1,136 @@
+@import "../base/base";
+
+.footer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  &__notification {
+    position: fixed;
+    z-index: 10;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 16px 0 rgba(0,44,92,0.28);
+    border-radius: 8px;
+    display: none;
+  }
+
+  &__bg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+    display: none;
+  }
+}
+
+@media @desktop {
+  .footer {
+
+    &__button {
+      height: 36px;
+
+      &_cancel {
+        width: 80px;
+      }
+
+      &_delete {
+        width: 140px;
+        margin-left: 16px;
+      }
+
+      &_save {
+        width: 101px;
+        margin-left: 16px;
+      }
+
+      &_create {
+        margin-left: 16px;
+        width: 140px;
+      }
+    }
+
+    &__notification {
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      height: 228px;
+      width: 444px;
+    }
+
+    &__bg {
+      background-color:  rgba(0,16,33,0.40);
+    }
+  }
+}
+
+@media @touch {
+  .footer {
+
+    &_right {
+      justify-content: flex-end;
+    }
+
+    &__button {
+      height: 44px;
+
+      &_cancel {
+        width: 103px;
+      }
+
+      &_create {
+        margin-left: 16px;
+        width: 140px;
+      }
+
+      &_delete {
+        display: none;
+      }
+
+      &_save {
+        width: 128px;
+        margin-left: 16px;
+      }
+    }
+
+    &__notification {
+      left: 0;
+      right: 0;
+      bottom: 24px;
+      height: 244px;
+    }
+
+    &__bg {
+      background-color: rgba(0, 16, 33, 0.80);
+    }
+  }
+}
+
+
+
+    //&__notification {
+    //  position: fixed;
+    //  bottom: 80px;
+    //  width: 100%;
+    //  height: 43px;
+    //  padding-left: 16px;
+    //  box-sizing: border-box;
+    //  line-height: 43px;
+    //  background-color: rgba(0,16,33,0.80);
+    //  opacity: 0.9;
+    //
+    //  &:after {
+    //    content: "Выберите переговорку";
+    //    font-weight: 700;
+    //    font-size: 15px;
+    //    color: #FFFFFF;
+    //    display: inline;
+    //  }
+    //}
+  //}
+//}

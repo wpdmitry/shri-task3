@@ -1,0 +1,121 @@
+@import "../base/base";
+
+
+.rooms {
+  width: 100%;
+
+  &__floor-text {
+    position: relative;
+    z-index: 3;
+    font-weight: 700;
+    font-size: 11px;
+    color: #858E98;
+    letter-spacing: 0.4px;
+  }
+
+  &__room {
+    color: #000;
+
+    &__available {
+
+    }
+  }
+
+  &__room-title {
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    opacity: 0.8;
+    font-size: 15px;
+    line-height: 17px;
+    height: 17px;
+  }
+
+  &__room-capacity {
+    height: 17px;
+    font-size: 13px;
+    line-height: 17px;
+    //font-weight: 700;
+    //opacity: 0.7;
+  }
+}
+
+@media @desktop {
+  .rooms {
+    background-color: #fff;
+    overflow: hidden;
+
+    &__floor {
+      margin-top: 21px;
+    }
+
+    &__floor-text {
+      height: 13px;
+      width: 46px;
+    }
+
+    &__room {
+      height: 44px;
+      margin-top: 8px;
+      padding-top: 4px;
+      box-sizing: border-box;
+    }
+
+    &__room-capacity {
+      margin-top: 2px;
+    }
+  }
+}
+
+@media @touch {
+  .rooms {
+    background-color: #F6F7F9;
+
+    &__floor-text {
+      padding: 16px 0 0 16px;
+      height: 37px;
+      box-sizing: border-box;
+    }
+
+    &__room {
+      margin-top: 2px;
+      height: 58px;
+      width: 100%;
+      padding: 12px 0 0 16px;
+      box-sizing: border-box;
+      background-color: #FFFFFF;
+      box-shadow: inset -1px 0 0 0 #E9ECEF;
+
+      &:nth-child(2) {
+        margin: 0;
+      }
+    }
+
+    &__room-title {
+      width: 140px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+
+      &_scrolling {
+        width: max-content;
+        height: 24px;
+        line-height: 24px;
+        padding: 0 8px;
+        box-sizing: border-box;
+        background-color: #FFFFFF;
+        box-shadow: 0 1px 8px 0 rgba(0,44,92,0.28);
+        border-radius: 4px;
+        font-weight: 700;
+        font-size: 11px;
+        letter-spacing: 0.4px;
+        top: -12px;
+      }
+    }
+
+    &__room-capacity {
+      width: 140px;
+      margin-top: 2px;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+@import "../base/base";
+
+.talks {
+
+  &__title {
+    height: 16px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0;
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #E9ECEF;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+
+    &_chosen {
+      background-color: #007DFF;
+      color: #FFFFFF;
+    }
+
+    &_hidden {
+      visibility: hidden;
+    }
+  }
+
+  > *:nth-child(n + 3) {
+    margin-top: 8px;
+  }
+
+  &__time {
+    font-weight: 700;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 17px;
+    display: inline;
+
+    &_chosen {
+      color: #FFFFFF;
+    }
+  }
+
+  &__location {
+    margin-left: 16px;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 17px;
+    display: inline;
+
+    &_chosen {
+      color: #FFFFFF;
+    }
+  }
+
+  &__delete {
+    position: absolute;
+    right: 12px;
+    height: 16px;
+    width: 16px;
+  }
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media @desktop {
+  .talks {
+    &__title {
+      margin-bottom: 5px;
+    }
+
+    &__item {
+      height: 37px;
+      padding: 10px;
+    }
+  }
+}
+
+@media @touch {
+  .talks {
+    &__title {
+      margin-bottom: 4px;
+    }
+
+    &__item {
+      height: 44px;
+      padding: 13px 0 14px 12px;
+    }
+  }
+}

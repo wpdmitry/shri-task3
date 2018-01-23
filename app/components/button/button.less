@@ -1,0 +1,91 @@
+@import "../base/base";
+
+.button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 100%;
+  outline: none;
+  border: none;
+
+  &_create,
+  &_save {
+    background-color: #007DFF;
+
+    &:hover {
+      background-color: rgba(0, 89, 255, 0.86);
+    }
+
+    &:active {
+      background-color: #0052ed;
+    }
+  }
+
+  &_cancel,
+  &_delete {
+    background-color: #E9ECEF;
+
+    &:hover {
+      background-color: #e5e8eb;
+    }
+
+    &:active {
+      background-color: rgba(4, 29, 56, 0.14);
+    }
+  }
+
+  &__text {
+    font-size: 13px;
+    letter-spacing: 0;
+
+    &_white {
+      color: #FFFFFF;
+    }
+
+    &_black {
+      color: #000;
+    }
+
+    &_disabled {
+      color:  rgba(0,0,0,0.20);
+    }
+
+    &_red {
+      color: #FF3333;
+    }
+
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &__disabled {
+    background-color: #E2E5E8;
+  }
+
+  &__delete {
+    background-color: #fff;
+  }
+}
+
+@media @desktop {
+  .button {
+
+    &__text {
+    }
+  }
+}
+
+@media @touch {
+  .button {
+
+    &__text {
+
+      &_increase {
+        font-size: 15px;
+      }
+    }
+  }
+}
