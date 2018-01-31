@@ -1,0 +1,90 @@
+@import "../base/base";
+
+
+.date-selection {
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+  &__date {
+  }
+
+  &__time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__time-start,
+  &__time-end {
+    height: 100%;
+  }
+
+  &__delimiter {
+    width: 14px;
+    height: 16px;
+    font-weight: 700;
+    font-size: 13px;
+    color: #000000;
+    letter-spacing: 0.47px;
+  }
+}
+
+
+@media @desktop {
+  .date-selection {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__date {
+      height: 100%;
+      width: 238px;
+    }
+
+    &__time {
+      width: 166px;
+      height: 100%;
+      justify-content: space-between;
+    }
+
+    &__time-start,
+    &__time-end {
+      width: 72px;
+    }
+
+    &__delimiter {
+      align-self: flex-end;
+      margin: 0 4px 12px;
+
+    }
+  }
+
+}
+
+
+@media @touch {
+  .date-selection {
+    flex-direction: column;
+
+    &__date {
+      width: 100%;
+      height: 64px;
+    }
+
+    &__time {
+      margin-top: 8px;
+      width: 100%;
+      height: 44px;
+    }
+
+    &__time-start,
+    &__time-end {
+      flex-grow: 1;
+    }
+
+    &__delimiter {
+      margin: 0 4px;
+    }
+  }
+
+}

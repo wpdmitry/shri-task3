@@ -1,0 +1,113 @@
+@import "../base/base";
+
+.popup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+
+  &__edit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+    background-color: #E9ECEF;
+
+    &:hover {
+
+      > [class$="img"] {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__edit-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 11px;
+    height: 11px;
+    opacity: 0.4;
+  }
+
+  &__title {
+    height: 24px;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 0;
+    line-height: 24px;
+  }
+
+  &__description {
+    height: 17px;
+    letter-spacing: 0;
+    line-height: 17px;
+  }
+
+  &__time {
+    display: inline-block;
+  }
+
+  &__delimiter {
+    margin: 0 3px;
+    display: inline-block;
+  }
+
+  &__members {
+    margin-top: 16px;
+    letter-spacing: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  &__creator {
+    color: #000;
+  }
+
+  &__other {
+    margin-left: 5px;
+    color: #949494;
+  }
+}
+
+@media @desktop {
+  .popup {
+
+    &__title {
+      font-size: 15px;
+    }
+
+    &__description {
+      margin-top: 2px;
+      font-size: 13px;
+      color: #000000;
+    }
+
+    &__members {
+      font-size: 13px;
+      height: 24px;
+    }
+  }
+}
+
+@media @touch {
+  .popup {
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__description {
+      margin-top: 8px;
+      font-size: 15px;
+      color: #333333;
+    }
+
+    &__members {
+      font-size: 15px;
+      height: 32px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+Исправлено graphgl на graphql
+Добавлен 3-ий аргумент для Sequelize
+Удалено поле UserRoom
+Замена arguments на {}   ?
+Замена {offset: 1} на {} ?
+union SearchResult = User | Event | Room ?
+Шаблон вынесен в отдельный файл index.html
+Добавлены return в resolvers Event
+Исправлено в changeEventRoom id на roomId и добавлен return
+Добавлена функция addUserToEvent в мутации
+В схему User добавлено defaultValue для avatarUrl

@@ -1,0 +1,46 @@
+@import "../base/base";
+
+
+.header {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+@media @desktop {
+  .header {
+
+    &__logo {
+      width: 174px;
+      height: 24px;
+    }
+
+    &__button {
+      width: 140px;
+      height: 36px;
+
+      &_inactive {
+        display: none;
+      }
+    }
+  }
+}
+
+
+@media @touch {
+  .header {
+
+    &__logo {
+      width: 150px;
+      height: 21px;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,121 @@
+@import "../base/base";
+
+
+.main {
+  width: 100%;
+  height: 100%;
+
+  &__date {
+    box-sizing: border-box;
+  }
+
+  &__wrapper1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 -1px 0 0 #E9ECEF;
+  }
+
+  &__time-scale {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-end;
+    box-sizing: border-box;
+  }
+
+  &__wrapper2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    box-shadow: inset 0 1px 0 0 #E9ECEF;
+  }
+
+  &__rooms {
+  }
+
+  &__diagram {
+    background-color: #F6F7F9;
+  }
+}
+
+
+@media @desktop {
+  .main {
+    position: relative;
+
+    &__date {
+      position: relative;
+      padding: 0 24px;
+      width: 245px;
+      height: 46px;
+      z-index: 4;
+      box-shadow: 0 1px 0 0 #E9ECEF;
+    }
+
+    &__wrapper1 {
+      position: absolute;
+      top: 0;
+      height: 100%;
+    }
+
+    &__time-scale {
+      width: calc(~"100% - 245px");
+      height: 46px;
+      //padding: 0 8px;
+    }
+
+    &__wrapper2 {
+      height: calc(~"100% - 46px");
+    }
+
+    &__rooms {
+      width: 245px;
+      box-shadow: 1px 0 0 0 #E9ECEF;
+      padding-left: 25px;
+      box-sizing: border-box;
+      background-color: #FFFFFF;
+    }
+
+    &__diagram {
+      width: calc(~"100% - 245px");
+    }
+  }
+}
+
+
+@media @touch {
+  .main {
+
+    &__date {
+      padding: 0 16px;
+      width: 100%;
+      height: 56px;
+    }
+
+    &__wrapper1 {
+      height: calc(~"100% - 56px");
+      overflow-y: hidden;
+      overflow-x: scroll;
+    }
+
+    &__time-scale {
+      width: calc(~"100% - 181px");
+      height: 32px;
+      //padding-left: 34px;
+    }
+
+    &__wrapper2 {
+      height: calc(~"100% - 32px");
+    }
+
+    &__rooms {
+      min-width: 181px;
+      box-shadow: inset 0 1px 0 0 #E9ECEF;
+    }
+
+    &__diagram {
+      //width: calc(~"100% - 181px");
+    }
+  }
+}
